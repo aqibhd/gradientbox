@@ -1,7 +1,7 @@
 name: gradientbox
 description: A package that lets you add a beautiful modifiable Gradient Box to your Flutter app.
 version: 0.0.1
-homepage:
+homepage: https://github.com/paanTom/gradientbox
 
 environment:
   sdk: ">=2.17.3 <3.0.0"
