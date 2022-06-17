@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+import '../gradientbox.dart';
+
 class GradientBox extends StatelessWidget {
   final VoidCallback? onTap;
 
@@ -10,6 +12,8 @@ class GradientBox extends StatelessWidget {
   final double? width;
 
   final double? borderRadius;
+
+  final GradientColors? gradientColors;
 
   final bool showShadow;
 
@@ -29,6 +33,7 @@ class GradientBox extends StatelessWidget {
       this.width,
       this.padding,
       this.margin,
+      this.gradientColors,
       this.borderRadius,
       this.showShadow = true,
       this.shadowColor,
@@ -50,8 +55,10 @@ class GradientBox extends StatelessWidget {
         width: width,
         decoration: BoxDecoration(
           borderRadius: BorderRadius.all(Radius.circular(borderRadius ?? 25.0)),
-          gradient: const LinearGradient(
-              colors: [Colors.red, Colors.green],
+          gradient: LinearGradient(
+              colors: gradientColors == null
+                  ? GradientColors.random().colors
+                  : gradientColors!.colors,
               begin: Alignment.topLeft,
               end: Alignment.bottomRight),
           boxShadow: showShadow
