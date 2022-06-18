@@ -10,7 +10,7 @@ A **package** that lets you add a beautiful modifiable **Gradient Box** to your 
 
 ```yaml
 dependencies:
-  gradientbox: ^0.0.1
+  gradientbox: ^0.0.2
 ```
 
 2. Import the package and use it in your Flutter App.
